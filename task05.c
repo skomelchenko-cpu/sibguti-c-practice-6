@@ -1,11 +1,9 @@
 #include <stdio.h>
-
-int main(void) {
+int main(void){
     int choice;
     int ch;
     double value, result;
-
-    while (1) {
+    while (1){
         printf("\n===== ENERGY CONVERTER =====\n");
         printf("1. Joules to calories\n");
         printf("2. Calories to kilocalories\n");
