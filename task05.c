@@ -11,39 +11,34 @@ int main(void){
         printf("4. Electronvolts to Joules\n");
         printf("0. Exit\n");
         printf("Choose an option: ");
-
-        if (scanf("%d", &choice) != 1) {
+        if (scanf("%d", &choice) != 1){
             printf("Invalid input!\n");
-            while ((ch = getchar()) != '\n' && ch != EOF) {
+            while ((ch = getchar()) != '\n' && ch != EOF){
             }
-            if (ch == EOF) {
+            if (ch == EOF){
                 break;
             }
             continue;
         }
-
-        if (choice == 0) {
+        if (choice == 0){
             printf("Program finished.\n");
             break;
         }
-
-        if (choice < 1 || choice > 4) {
+        if (choice < 1 || choice > 4){
             printf("Invalid menu option!\n");
             continue;
         }
-
         printf("Enter value: ");
-        if (scanf("%lf", &value) != 1) {
+        if (scanf("%lf", &value) != 1){
             printf("Invalid value!\n");
-            while ((ch = getchar()) != '\n' && ch != EOF) {
+            while ((ch = getchar()) != '\n' && ch != EOF){
             }
-            if (ch == EOF) {
+            if (ch == EOF){
                 break;
             }
             continue;
         }
-
-        switch (choice) {
+        switch (choice){
             case 1:
                 result = value / 4.184;
                 printf("Calories: %.10g\n", result);
@@ -65,7 +60,5 @@ int main(void){
                 break;
         }
     }
-
-    /* Without break, execution falls through into the following case. */
     return 0;
 }
